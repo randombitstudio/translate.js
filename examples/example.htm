@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+      <head>
+      <meta charset="UTF-8">
+      <title>Translate.js Example - JSON</title>
+      <link href="../deps/bootstrap/assets/js/css/bootstrap-responsive.min.css"
+            rel="stylesheet">
+      <script src="../deps/jquery/jquery.min.js"></script>
+      <script src="../deps/bootstrap/docs/assets/js/bootstrap.min.js"></script>
+      <script type="text/javascript"
+      src="../dist/translate.0.1.0.min.js"></script>
+      <script>
+        $(function() {
+            $('[data-translate=1]').translate();
+        });
+      </script>
+      <style type="text/css">
+.translation-template {display:none; } 
+.language-add:hover {cursor:pointer;}
+.language-remove:hover {cursor:pointer;}
+      </style>
+      </head>
+<body>
+    <div class="container">
+<br /><br />
+      <div class="input-append">
+<input data-translate="1"
+       data-translations="{&quot;English&quot;:&quot;Yesss!!!&quot;,&quot;Dutch&quot;:&quot;Yaaa!!!&quot;,&quot;French&quot;:&quot;Ouaissss\&quot;!&quot;}"
+       data-language="English" name="test" type="text"
+       value="Yesss!!!">      </div>
+      </div> 
+      <div style="display:none;">
+      
+      <span class="add-on"
+      id="translate-button"><i class="icon-globe"></i></span>
+      
+      <div id="translate-container">
+      <div class="control-group">
+      <div class="input-prepend">
+      <input class="span3 language-select" id="language-select"
+      type="text" placeholder="Language" />
+      <span class="add-on
+      language-add"><i class="icon-plus"></i></span>
+      </div>
+      </div>
+      <div class="control-group translation-row translation-template">
+      <div class="input-prepend input-append">
+      <span class="add-on btn btn-success language-name"></span>
+      <textarea rows="2" class="span3 language-value"></textarea>
+      <span class="add-on
+      language-remove"><i class="icon-minus"></i></span>
+      </div>
+      </div>
+      </div>
+      </div>
+</body>
+</html>
